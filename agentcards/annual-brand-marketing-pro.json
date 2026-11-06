@@ -1,0 +1,121 @@
+{
+  "protocolVersion": "1.0.0",
+  "name": "Brand Full-Plan Strategist Pro",
+  "description": "Flagship brand marketing strategist: full-web reputation & positioning deep diagnosis (SWOT + STP + brand-aliveness radar), 5-layer competitive forces, and an annual plan delivered in one pass.",
+  "version": "1.1.4",
+  "supportedInterfaces": [
+    {
+      "url": "https://sanhaoyoung821208-d5dv139af0958c.service.tcloudbase.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false,
+    "extensions": [
+      {
+        "uri": "https://a2a-registry.org/extensions/registry/v1",
+        "required": false,
+        "params": {
+          "identity": {
+            "provider": "github",
+            "username": "sanhaoyoung",
+            "packageName": "github.sanhaoyoung.sanhao-global-experts"
+          },
+          "payment": {
+            "model": "paid",
+            "protocols": [
+              "x402"
+            ],
+            "direction": "inbound",
+            "rails": [
+              {
+                "network": "base",
+                "token": "USDC",
+                "type": "stablecoin",
+                "protocol": "x402",
+                "caip2": "eip155:8453",
+                "contractAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                "feeModel": "feeless",
+                "settlementTime": "fast"
+              }
+            ],
+            "skills": [
+              {
+                "skillId": "annual-brand-marketing-pro",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              }
+            ],
+            "meta": {
+              "pricing": "per-call, prepaid on Base USDC via x402",
+              "free_tier": "methodology brief only, no LLM execution, no charge",
+              "settlement": "onchain, USDC on Base",
+              "refund_policy": "not charged on failed execution",
+              "sla": "p95 < 10s",
+              "contact": "454157727@qq.com"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "annual-brand-marketing-pro",
+      "name": "Brand Full-Plan Strategist Pro",
+      "description": "Flagship brand marketing strategist: full-web reputation & positioning deep diagnosis (SWOT + STP + brand-aliveness radar), 5-layer competitive forces, and an annual plan delivered in one pass.",
+      "tags": [
+        "Brand Full-Plan Strategy",
+        "Brand Aliveness Diagnosis",
+        "Annual Plan",
+        "20+ Platform Matrix"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Build my brand's full-year marketing plan with reputation diagnosis and an aliveness radar.",
+        "Produce a 12-month brand calendar with budget phasing."
+      ]
+    }
+  ],
+  "provider": {
+    "organization": "SanHao Brand Strategy",
+    "url": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.tcloudbaseapp.com"
+  },
+  "securitySchemes": {
+    "x402-payment": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "PAYMENT-SIGNATURE",
+      "description": "x402 v2 payment required for paid skills, via the PAYMENT-SIGNATURE header (legacy X-PAYMENT also accepted); the 402 challenge arrives in the PAYMENT-REQUIRED response header."
+    }
+  },
+  "security": [
+    {
+      "schemes": {
+        "x402-payment": {}
+      }
+    }
+  ],
+  "metadata": {
+    "registryIdentityProvider": "github",
+    "registryIdentity": "sanhaoyoung",
+    "registryPackageName": "github.sanhaoyoung.sanhao-global-experts"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "protocolVersion": "1.0.0",
+  "name": "Brand Strategy Expert",
+  "description": "Run a multi-framework brand diagnosis (3C, SWOT, STP, Porter, 4P, AIPL, AARRR, Brand Equity Pyramid) plus a 5-layer Authenticity assessment, then ship an adaptive HTML report with chart-interpretation and brand-color-matched visuals, exportable to PDF / long-image / PPTX.",
+  "version": "1.11.4",
+  "supportedInterfaces": [
+    {
+      "url": "https://sanhaoyoung821208-d5dv139af0958c.service.tcloudbase.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false,
+    "extensions": [
+      {
+        "uri": "https://a2a-registry.org/extensions/registry/v1",
+        "required": false,
+        "params": {
+          "identity": {
+            "provider": "github",
+            "username": "sanhaoyoung",
+            "packageName": "github.sanhaoyoung.sanhao-global-experts"
+          },
+          "payment": {
+            "model": "paid",
+            "protocols": [
+              "x402"
+            ],
+            "direction": "inbound",
+            "rails": [
+              {
+                "network": "base",
+                "token": "USDC",
+                "type": "stablecoin",
+                "protocol": "x402",
+                "caip2": "eip155:8453",
+                "contractAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                "feeModel": "feeless",
+                "settlementTime": "fast"
+              }
+            ],
+            "skills": [
+              {
+                "skillId": "brand-strategy-planner",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              }
+            ],
+            "meta": {
+              "pricing": "per-call, prepaid on Base USDC via x402",
+              "free_tier": "methodology brief only, no LLM execution, no charge",
+              "settlement": "onchain, USDC on Base",
+              "refund_policy": "not charged on failed execution",
+              "sla": "p95 < 10s",
+              "contact": "454157727@qq.com"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "brand-strategy-planner",
+      "name": "Brand Strategy Expert",
+      "description": "Run a multi-framework brand diagnosis (3C, SWOT, STP, Porter, 4P, AIPL, AARRR, Brand Equity Pyramid) plus a 5-layer Authenticity assessment, then ship an adaptive HTML report with chart-interpretation and brand-color-matched visuals, exportable to PDF / long-image / PPTX.",
+      "tags": [
+        "Brand Analysis",
+        "Authenticity Assessment",
+        "SWOT",
+        "STP",
+        "Strategy Report"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Analyze [Brand Name]'s online reputation, positioning and 5-layer Authenticity with a SWOT/STP diagnostic and authenticity radar.",
+        "Build a 3-year trend brand strategy deck using 3C, Porter's Five Forces and AIPL."
+      ]
+    }
+  ],
+  "provider": {
+    "organization": "SanHao Brand Strategy",
+    "url": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.tcloudbaseapp.com"
+  },
+  "securitySchemes": {
+    "x402-payment": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "PAYMENT-SIGNATURE",
+      "description": "x402 v2 payment required for paid skills, via the PAYMENT-SIGNATURE header (legacy X-PAYMENT also accepted); the 402 challenge arrives in the PAYMENT-REQUIRED response header."
+    }
+  },
+  "security": [
+    {
+      "schemes": {
+        "x402-payment": {}
+      }
+    }
+  ],
+  "metadata": {
+    "registryIdentityProvider": "github",
+    "registryIdentity": "sanhaoyoung",
+    "registryPackageName": "github.sanhaoyoung.sanhao-global-experts"
+  }
+}

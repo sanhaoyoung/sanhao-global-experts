@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sanhaoyoung/sanhao-global-experts",
+  "description": "885 paid business skills for brand, restaurant and marketing. Per-call x402 USDC micropayments on Base.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/sanhaoyoung/sanhao-global-experts",
+    "source": "github"
+  },
+  "websiteUrl": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.tcloudbaseapp.com/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.ap-shanghai.app.tcloudbase.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "protocols": [
+        "a2a",
+        "mcp"
+      ],
+      "payment": {
+        "model": "paid",
+        "protocols": [
+          "x402"
+        ],
+        "network": "base",
+        "token": "USDC",
+        "price": "0.01",
+        "unit": "call"
+      },
+      "a2a": {
+        "agentCard": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.tcloudbaseapp.com/.well-known/agent-card.json",
+        "registry": "https://www.a2a-registry.org/agents"
+      },
+      "toolCount": 885,
+      "freeTier": "methodology brief only, no LLM execution, no charge",
+      "contact": "454157727@qq.com"
+    }
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "protocolVersion": "1.0.0",
+  "name": "SanHao Global Experts Hub",
+  "description": "A hub of 12 expert agents for brand strategy, restaurant operations and marketing, video scripting, crisis PR and general business growth.",
+  "version": "1.0.0",
+  "supportedInterfaces": [
+    {
+      "url": "https://sanhaoyoung821208-d5dv139af0958c.service.tcloudbase.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false,
+    "extensions": [
+      {
+        "uri": "https://a2a-registry.org/extensions/registry/v1",
+        "required": false,
+        "params": {
+          "identity": {
+            "provider": "github",
+            "username": "sanhaoyoung",
+            "packageName": "github.sanhaoyoung.sanhao-global-experts"
+          },
+          "payment": {
+            "model": "paid",
+            "protocols": [
+              "x402"
+            ],
+            "direction": "inbound",
+            "rails": [
+              {
+                "network": "base",
+                "token": "USDC",
+                "type": "stablecoin",
+                "protocol": "x402",
+                "caip2": "eip155:8453",
+                "contractAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                "feeModel": "feeless",
+                "settlementTime": "fast"
+              }
+            ],
+            "skills": [
+              {
+                "skillId": "brand-strategy-planner",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "restaurant-ops-diagnostic",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "chain-restaurant-war-room",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "brand-architecture",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "annual-brand-marketing-pro",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "restaurant-menu-engineering",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "store-site-selector",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "crisis-pr-warroom",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "resume-optimizer",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "video-shot-script-master",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "budget-allocation",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              },
+              {
+                "skillId": "restaurant-newstore-launch",
+                "price": "0.01",
+                "currency": "USDC",
+                "unit": "call"
+              }
+            ],
+            "meta": {
+              "pricing": "per-call, prepaid on Base USDC via x402",
+              "free_tier": "methodology brief only, no LLM execution, no charge",
+              "settlement": "onchain, USDC on Base",
+              "refund_policy": "not charged on failed execution",
+              "sla": "p95 < 10s",
+              "contact": "454157727@qq.com"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "brand-strategy-planner",
+      "name": "Brand Strategy Expert",
+      "description": "Run a multi-framework brand diagnosis (3C, SWOT, STP, Porter, 4P, AIPL, AARRR, Brand Equity Pyramid) plus a 5-layer Authenticity assessment, then ship an adaptive HTML report with chart-interpretation and brand-color-matched visuals, exportable to PDF / long-image / PPTX.",
+      "tags": [
+        "Brand Analysis",
+        "Authenticity Assessment",
+        "SWOT",
+        "STP",
+        "Strategy Report"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Analyze [Brand Name]'s online reputation, positioning and 5-layer Authenticity with a SWOT/STP diagnostic and authenticity radar.",
+        "Build a 3-year trend brand strategy deck using 3C, Porter's Five Forces and AIPL."
+      ]
+    },
+    {
+      "id": "restaurant-ops-diagnostic",
+      "name": "Restaurant Ops Diagnostic",
+      "description": "Parse multi-format store documents and run six business-analysis modules (revenue, traffic, menu, member, operations, finance). Output problem tiers, root causes and a prioritized action list that bridges to supply-chain and HR experts.",
+      "tags": [
+        "Operational Efficiency Diagnosis",
+        "Revenue Diagnosis",
+        "Menu Diagnosis",
+        "Member Ops"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Upload my monthly revenue report and pinpoint the core drivers of performance fluctuation.",
+        "Diagnose my store's traffic-to-transaction conversion and propose fixes."
+      ]
+    },
+    {
+      "id": "chain-restaurant-war-room",
+      "name": "Chain F&B War Room",
+      "description": "Generate full campaigns from minimal input, preview ROI, build SOPs and run three-role decision flows (director / regional / store) with visual reviews. Ships a double-click single-file HTML workbench.",
+      "tags": [
+        "All-Scenario Campaigns",
+        "Three-Role Linkage",
+        "ROI Calculator",
+        "Marketing Diagnosis"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "I am a chain restaurant marketing director. Help me generate a complete marketing campaign with minimal input.",
+        "Build a Q3 regional promotion plan with ROI preview for 50 stores."
+      ]
+    },
+    {
+      "id": "brand-architecture",
+      "name": "Brand Portfolio Architect",
+      "description": "Designs brand portfolio and hierarchy, manages synergies and boundaries, and presents results as illustrated, easy-to-read web pages.",
+      "tags": [
+        "Portfolio Architecture",
+        "Brand Hierarchy",
+        "Brand Roles"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Design a brand architecture for a parent brand expanding into 3 sub-brands.",
+        "Map brand roles and prevent cannibalization across my portfolio."
+      ]
+    },
+    {
+      "id": "annual-brand-marketing-pro",
+      "name": "Brand Full-Plan Strategist Pro",
+      "description": "Flagship brand marketing strategist: full-web reputation & positioning deep diagnosis (SWOT + STP + brand-aliveness radar), 5-layer competitive forces, and an annual plan delivered in one pass.",
+      "tags": [
+        "Brand Full-Plan Strategy",
+        "Brand Aliveness Diagnosis",
+        "Annual Plan",
+        "20+ Platform Matrix"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Build my brand's full-year marketing plan with reputation diagnosis and an aliveness radar.",
+        "Produce a 12-month brand calendar with budget phasing."
+      ]
+    },
+    {
+      "id": "restaurant-menu-engineering",
+      "name": "Menu Engineering & GTM Expert",
+      "description": "Menu engineering & new-product launch expert for chain restaurants: four-quadrant menu analysis, golden SKU count bounded by site capacity, price-band ladders & anchoring, combo / attach-rate design, and a 0-90 day GTM plan with gross-margin modeling.",
+      "tags": [
+        "Menu Engineering",
+        "Golden SKU Count",
+        "Price-Band Design",
+        "New-Product GTM"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Analyze my menu and recommend SKU cuts and price-band restructuring.",
+        "Design a 0-90 day launch plan for a new hero product."
+      ]
+    },
+    {
+      "id": "store-site-selector",
+      "name": "Store Site-Selection Master",
+      "description": "Reverse-engineers a brand's standard store model from online+offline data, fetches POI / road data via free maps, and outputs payback / break-even / priority ranking and franchise-fit rating.",
+      "tags": [
+        "Store-Model Inference",
+        "Geo-Site Matching",
+        "Store-Priority Ranking"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Find the optimal 10 store locations for my brand in [City].",
+        "Score these 5 candidate sites by payback and break-even."
+      ]
+    },
+    {
+      "id": "crisis-pr-warroom",
+      "name": "Crisis PR War Room",
+      "description": "Tiered crisis-response SOP and scenario copy library (food-safety / service / franchise / endorsement / backlash), 30-minute response on red alert, and post-crisis reputation repair to rebuild trust.",
+      "tags": [
+        "Crisis Response",
+        "Reputation Repair",
+        "Scenario SOP"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "A food-safety complaint is trending — give me the 30-minute response plan.",
+        "Draft post-crisis reputation repair steps after a service backlash."
+      ]
+    },
+    {
+      "id": "resume-optimizer",
+      "name": "Resume Optimizer",
+      "description": "25-year HR manager & resume-polishing master who rebuilds your resume for the target role, extracts core highlights, addresses concerns, and delivers a big-tech-style A4 resume.",
+      "tags": [
+        "Resume Polishing",
+        "Highlight Extraction",
+        "Concern Mitigation"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Rebuild my resume for a senior product manager role.",
+        "Extract my core highlights and fix the weak points in my CV."
+      ]
+    },
+    {
+      "id": "video-shot-script-master",
+      "name": "Viral Video Storyboard Master",
+      "description": "20-year streaming-video scriptwriter fluent across major short-video platforms (Douyin, Xiaohongshu, YouTube Shorts, TikTok, Reels); merges PREP, contrast, FIRE, RIDE and IP-reinforcement into ready-to-shoot storyboards.",
+      "tags": [
+        "Video Storyboarding",
+        "Viral Formula",
+        "Multi-platform Tune"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Give me a 60-second viral storyboard for a new product launch.",
+        "Adapt this script for TikTok and YouTube Shorts."
+      ]
+    },
+    {
+      "id": "budget-allocation",
+      "name": "Budget Allocation Strategist",
+      "description": "Allocates brand budget, evaluates ROI, and manages efficiency — delivering investment returns and decision rules as illustrated, plain-language HTML.",
+      "tags": [
+        "Budget Allocation",
+        "ROI Evaluation",
+        "Efficiency Management"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Allocate my $1M annual brand budget across channels by ROI.",
+        "Show decision rules for shifting budget when CAC rises."
+      ]
+    },
+    {
+      "id": "restaurant-newstore-launch",
+      "name": "New-Store Launch & Ramp-Up",
+      "description": "New-store launch & ramp-up marketing for chain restaurants: D-30/15/7 pre-heat tiers, soft-open stress testing, 3-day launch blast with crowd-flow control, 30/60/90-day ramp-up targets, rating & word-of-mouth cold-start; outputs a reusable store-opening template.",
+      "tags": [
+        "New-Store Launch",
+        "3-Tier Pre-heat",
+        "Ramp-up 30/60/90",
+        "WOM Cold-Start"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "text/markdown"
+      ],
+      "examples": [
+        "Plan the 90-day launch roadmap for my new store.",
+        "Design the 3-day blast with crowd-flow control for opening week."
+      ]
+    }
+  ],
+  "provider": {
+    "organization": "SanHao Brand Strategy",
+    "url": "https://sanhaoyoung821208-d5dv139af0958c-1255559199.tcloudbaseapp.com"
+  },
+  "securitySchemes": {
+    "x402-payment": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "PAYMENT-SIGNATURE",
+      "description": "x402 v2 payment required for paid skills, via the PAYMENT-SIGNATURE header (legacy X-PAYMENT also accepted); the 402 challenge arrives in the PAYMENT-REQUIRED response header."
+    }
+  },
+  "security": [
+    {
+      "schemes": {
+        "x402-payment": {}
+      }
+    }
+  ],
+  "metadata": {
+    "registryIdentityProvider": "github",
+    "registryIdentity": "sanhaoyoung",
+    "registryPackageName": "github.sanhaoyoung.sanhao-global-experts"
+  }
+}
